@@ -9,12 +9,14 @@
         
             #header
             {
-                margin-top: 20px;
                 margin-left: auto;
                 margin-right: auto;
                 width: 500px;
                 height: 200px;
-                position: relative;
+                position: absolute;
+                top: 0;
+                left: 60%;
+                transform: translate(0, -107%);
             }
 
             #innerheader
@@ -23,10 +25,7 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain; 
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                transform: translate(0, -12px);
+           
                 height: 200px;
                 width: 200px;
                 display: flex;
@@ -68,10 +67,14 @@
                 margin: 0;
                 padding: 0;
                 position: relative;
-                min-height: 100%;
+                height: 100%;
                 width: 100%;
                 overflow: hidden;
                 background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 /*
                 margin: 0;
                 padding: 0;
@@ -96,12 +99,9 @@
 
             #calendar
             {
-                margin-top: 0px;
                 position: relative;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: auto;
-                margin-bottom: auto;
                 width: 500px;
                 height: 500px;
                 border: 2px solid rgba(255, 255, 255, 1);
@@ -465,6 +465,10 @@
 
             #textCorrectionBox
             {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -70px);
                 text-align: center;
                 font-size: 10px;
                 padding: 0px 0px 0px 0px;
@@ -472,7 +476,6 @@
                 width: 600px;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: 120px; /* guesser top correction */
                 height: 40px;
             }
 
@@ -740,14 +743,14 @@
             
             #textCorrectionBox
             {
+                transform: translate(-50%, -50px);
                 text-align: center;
                 font-size: 5px;
                 padding: 0px 0px 0px 0px;
                 display: none;
-                width: 420px;
+                width: 500px;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: 120px; /* guesser top correction */
                 height: 40px;
             }
 
@@ -1022,7 +1025,6 @@
                 {
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 30px;
                     position: relative;
                     width: 400px;
                     height: 400px;
@@ -1122,10 +1124,6 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain; 
-                position: absolute;
-                right: 0;
-                top: 0;
-                transform: translate(0, 19px);
                 height: 200px;
                 width: 200px;
                 display: flex;
@@ -1137,11 +1135,12 @@
 
                 #header
                 {
+                    top: 0;
+                    left: 30%;
+                    transform: translate(0, -105.5%);
                     width: 400px;
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 90px;
-                    position: relative;
                     display: flex;
                     justify-content: center;
                 }
@@ -1158,7 +1157,7 @@
         
             }
 
-            @media only screen and (max-width: 500px)
+            @media only screen and (max-width: 480px)
             {
 
             #borderCalendar
@@ -1174,14 +1173,14 @@
             
             #textCorrectionBox
             {
+                transform: translate(-50%, -50px);
                 text-align: center;
                 font-size: 5px;
                 padding: 0px 0px 0px 0px;
                 display: none;
-                width: 420px;
+                width: 400px;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: 120px; /* guesser top correction */
                 height: 40px;
             }
 
@@ -1514,8 +1513,6 @@
                 {
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 30px;
-                    position: relative;
                     width: 300px;
                     height: 300px;
                     border: 0px;
@@ -1626,9 +1623,8 @@
                 background-repeat: no-repeat;
                 background-size: contain; 
                 position: absolute;
-                right: 0;
-                top: 0;
-                transform: translate(-45px, 72.5px); /* -20 21 before */
+                right: 10%;
+                transform: translate(0, -7.5px);
                 height: 150px;
                 width: 150px;
                 display: flex;
@@ -1640,11 +1636,12 @@
 
                 #header
                 {
+                    top: 0;
+                    left: -20%;
+                    transform: translate(0, -75%);
                     width: 400px;
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 90px;
-                    position: relative;
                     display: flex;
                     justify-content: center;
                 }
@@ -1745,27 +1742,6 @@
                 
             </div>
         </div>
-            <div id="header">
-                <div id="innerheader">
-                    <div id="textPositioning">
-                        <p class="textUnselectable" id="daysLeftletters">days left</p>
-                        <div class="innerheaderspatie">
-                            <p class="christmasletters textUnselectable">M</p>
-                            <p class="christmasletters textUnselectable">E</p>
-                            <p class="christmasletters textUnselectable">R</p>
-                            <p class="christmasletters textUnselectable">R</p>
-                            <p class="christmasletters textUnselectable">Y</p>
-                        </div>
-                        <div class="innerheaderspatie textUnselectable">
-                            <p class="christmasletters textUnselectable">X</p>
-                            <p class="christmasletters textUnselectable">-</p>
-                            <p class="christmasletters textUnselectable">M</p>
-                            <p class="christmasletters textUnselectable">A</p>
-                            <p class="christmasletters textUnselectable">S</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div id="menuBox">
                 <button class="menuButton textUnselectable" id="arrowButton" onclick="Close({winCondition: false})"><img draggable="false" class="menuButtonImg" src="./images/back_arrow_pixel.png"></button>
                 <button class="menuButton textUnselectable" onclick="musicHandler()"><img draggable="false" id="musicIcon" class="menuButtonImg" src="./images/music_off_pixel.png"></button>
@@ -1776,11 +1752,11 @@
                 <button class="menuButton textUnselectable" onclick="SnowHandler()"><img draggable="false"id="snowIcon" class="menuButtonImg" src="./images/snow_on_pixel.png"></button>
                 <button id="listButton" class="menuButton textUnselectable" onclick="listHandler()"><img draggable="false" id="listIcon" class="menuButtonImg" src="./images/list_icon_pixel.png"></button>
             </div>
+            
+            <div id="guesser">
             <div id="textCorrectionBox">
                 <p class="textUnselectable" id="textCorrection">Word is not on santa's list</p>
             </div>
-            <div id="guesser">
-               
                 <img id="santaNkiImg" draggable="false" class="textUnselectable" src = "./images/SantaNormal.png">
                 <div id="healthBar">
                     <div class="healthPoint"></div>
@@ -1884,6 +1860,27 @@
             </div>
             
             <div id="calendar">
+                <div id="header">
+                    <div id="innerheader">
+                        <div id="textPositioning">
+                            <p class="textUnselectable" id="daysLeftletters">days left</p>
+                            <div class="innerheaderspatie">
+                                <p class="christmasletters textUnselectable">M</p>
+                                <p class="christmasletters textUnselectable">E</p>
+                                <p class="christmasletters textUnselectable">R</p>
+                                <p class="christmasletters textUnselectable">R</p>
+                                <p class="christmasletters textUnselectable">Y</p>
+                            </div>
+                            <div class="innerheaderspatie textUnselectable">
+                                <p class="christmasletters textUnselectable">X</p>
+                                <p class="christmasletters textUnselectable">-</p>
+                                <p class="christmasletters textUnselectable">M</p>
+                                <p class="christmasletters textUnselectable">A</p>
+                                <p class="christmasletters textUnselectable">S</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <img draggable="false" class="textUnselectable" id="borderCalendar" src="./images/bordercalendar.png">
                 <img class="ringingPhoneImg" src="./images/phone_still.png">
                 <div class="textBoxClass" id="textBox">
