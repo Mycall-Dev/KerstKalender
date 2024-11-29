@@ -65,9 +65,13 @@
 
             body
             {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                min-height: 100vh;
+                width: 100vw;
+                overflow: hidden;
                 background-color: transparent;
-                overflow-y: hidden;
-                overflow-x: hidden;
                 /*
                 margin: 0;
                 padding: 0;
@@ -108,6 +112,7 @@
 
             .daybutton
             {
+                text-align: center;
                 font-family: "Silkscreen", sans-serif;
                 color: white;
                 font-size: 35px;
@@ -405,12 +410,24 @@
                 user-select: none; /* Standard syntax */
             }
 
-            video {
+            html
+            {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                height: 100%;
+            }
+
+            video
+            {
+                margin: 0;
+                padding: 0;
                 position: absolute;
-                top: 0;
-                left: 0;
-                min-width: 100%;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
                 min-height: 100%;
+                width: auto;
                 object-fit: cover;
                 z-index: -10; /* To make it a background */
             }
@@ -988,6 +1005,7 @@
                     -ms-user-select: none; /* IE 10 and IE 11 */
                     user-select: none; /* Standard syntax */
                     font-family: "Silkscreen", sans-serif;
+                    text-align: center;
                     color: white;
                     font-size: 30px;
                     border-radius: 0px;
@@ -1105,6 +1123,440 @@
                 right: 0;
                 top: 0;
                 transform: translate(0, 19px);
+                height: 200px;
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: right;
+                column-gap: 0px;
+                }
+
+                #header
+                {
+                    width: 400px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 90px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                #santaImg
+                {
+                    z-index: 10;
+                    width: 120px;
+                    position: absolute;
+                    bottom: 0%;
+                    left: 95%;
+                    transform: translate(-50%, 30%);
+                }
+        
+            }
+
+            @media only screen and (max-width: 500px)
+            {
+
+            #borderCalendar
+            {
+                width: 370px;
+                height: 370px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 8;
+            }
+            
+            #textCorrectionBox
+            {
+                text-align: center;
+                font-size: 5px;
+                padding: 0px 0px 0px 0px;
+                display: none;
+                width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 120px; /* guesser top correction */
+                height: 40px;
+            }
+
+            #textCorrection
+            {
+                color: rgb(0 0 0/0%);
+                font-family: "Silkscreen", sans-serif;
+                font-weight: 670;
+                font-size: 18px;
+            }
+
+            #finalBattleButton
+            {
+                font-size: 12px;
+                background-color: red;
+                color: black;
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10 and IE 11 */
+                user-select: none; /* Standard syntax */
+                position: absolute;
+                width: 55px;
+                height: 30px;
+                top: 94%;
+                left: 90%;
+                transform: translate(-50%, 0%);
+            }
+
+            #wordCounter
+            {
+                position: absolute;
+                left: 90%;
+                top: 0;
+                font-size: 35px; 
+            }
+            
+            #outer-list
+            {
+                z-index: 10;
+                position: absolute;
+                background: url(./images/list.png);
+                background-repeat: no-repeat;
+                background-size: 600px; 
+                background-position: center;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 600px;
+                height: 700px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #inner-list
+            {
+                position: relative;
+                font-family: "Jacquard 12", system-ui;
+                font-size: 20px;
+                font-weight: 300;
+                width: 400px;
+                height: 400px;
+                display: flex;
+                column-gap: 30px;              
+                justify-content: center;
+                align-items: center;
+            }
+
+            #inner-list p
+            {
+                display: block;
+                height: 25px;
+                width: 60px;
+                margin-top: 0px;
+                margin-bottom: 1px;
+            }
+            .inner-inner-list
+            {
+                display: flex;
+                flex-direction: column;
+                width: 80px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                height: 390px;
+            }
+
+            .listInput
+            {
+                font-family: "Jacquard 12", system-ui;
+                font-optical-sizing: auto;
+                font-style: normal;
+                font-weight: 300;   
+                font-size: 20px;
+                padding-top: 1.5px;
+                padding-bottom: 1.5px;
+                background-color: transparent;
+                border: 0px solid rgba(0, 0, 0, 0.15);
+                width: 75px;
+                margin-bottom: 1px;
+                text-align: center;
+            }
+
+            #listIcon
+            {
+                width: 60px;
+            }
+            #menuBox
+            {
+                padding-bottom: 5px;
+                margin-top: 0px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: left;
+                flex-direction: row;
+            }
+
+            .menuButtonImg
+            {
+                width: 50px;
+            }
+
+            .skipandbackbuttonImg
+            {
+                width: 40px;
+            }
+
+            #letterCounter
+            {
+                font-size: 18px;
+                position: absolute;
+                left: 94%;
+                top: 0;
+                transform: translate(0%, -30%);
+                color: black;
+                 font-family: "Silkscreen", sans-serif;
+            }
+
+            #guideButtonDiv
+            {
+                column-gap: 10px;
+                display: flex;
+                width: 260px;
+            }
+
+            #guideButtonYes
+            {
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10 and IE 11 */
+                user-select: none; /* Standard syntax */
+                width: 125px;
+                height: 125px;
+                font-optical-sizing: auto;
+                font-weight: 670;
+                font-style: normal;
+                 font-family: "Silkscreen", sans-serif;
+                padding: 5px 5px 5px 5px;
+                color: green;
+                background-color: rgb(0 0 0/0);
+                font-size: 20px;
+            }
+
+            #guideButtonNo
+            {
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10 and IE 11 */
+                user-select: none; /* Standard syntax */
+                width: 125px;
+                height: 125px;
+                font-optical-sizing: auto;
+                font-weight: 670;
+                font-style: normal;
+                font-size: 20px;
+                padding: 5px 5px 5px 5px;
+                 font-family: "Silkscreen", sans-serif;
+                color: red;
+                background-color: rgb(0 0 0/0);
+            }
+                #guideTextBox
+            {
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10 and IE 11 */
+                user-select: none; /* Standard syntax */
+                padding: 20px 20px 20px 20px;
+                word-wrap: break-word;
+                position: absolute;
+                z-index: 10;
+                color: white;
+                font-size: 20px;
+                 font-family: "Silkscreen", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 670;
+                font-style: normal;
+                width: 250px;
+                height: 100px;
+                top: 110%;
+                left: 11%;
+                transform: (0%, 0%);
+                border: 3px solid rgba(25,31,81,255);
+                border-radius: 15px;
+                background-color: rgba(67,72,170,255);
+                display: none;
+                justify-content: center;
+            }
+
+                #hintCharacterImgBox
+            {
+                position: absolute;
+                top: 0;
+                transform: translate(0%, -101%);
+                z-index: 1000;
+                width: 380px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                display: none;
+            }
+
+                #textBox
+                {
+                    display: none;
+                    padding: 30px 30px 30px 30px;
+                    position: absolute;
+                    z-index: 10;
+                    width: 290px;
+                    height: 200px;
+                    color: white;
+                    font-size: 19px;
+                     font-family: "Silkscreen", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 200;
+                    font-style: normal;
+                    top: 40%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 3px solid rgba(25,31,81,255);
+                    border-radius: 15px;
+                    background-color: rgba(67,72,170,255);
+                    /* rgba(67,72,170,255) color for the close text etc */
+                }
+
+                .christmasletters
+                {
+                    color: rgb(0 0 0/0%);
+                    font-size: 28px;
+                    font-weight: 500;
+                    font-family: "Silkscreen", sans-serif;
+                    display: none;
+                    -webkit-user-select: none; /* Safari */
+                    -ms-user-select: none; /* IE 10 and IE 11 */
+                    user-select: none; /* Standard syntax */
+                }
+
+                .daybutton
+                {
+                    -webkit-user-select: none; /* Safari */
+                    -ms-user-select: none; /* IE 10 and IE 11 */
+                    user-select: none; /* Standard syntax */
+                    font-family: "Silkscreen", sans-serif;
+                    color: white;
+                    text-align: center;
+                    font-size: 30px;
+                    border-radius: 0px;
+                    width: 20%;
+                    height: 70px;
+                    border: 2px solid rgb(0 0 0 /40%);
+                    position: relative;
+                }
+
+                #calendar
+                {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 30px;
+                    position: relative;
+                    width: 350px;
+                    height: 350px;
+                    border: 0px;
+                    border-radius: 6px;
+                    position: relative;
+                }
+                #holly
+                {
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    top: 50%;
+                    left:50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                #guesser
+                {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0px;
+                    position: relative;
+                    width: 350px;
+                    height: 535px;
+                    background-color:  rgba(255, 255, 255, 0.6);
+                    border-radius: 6px;
+                    display: none;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+
+                #wordleTable
+                {
+                    table-layout: fixed;
+                    text-align: center;
+                    width: 350px;
+                     font-family: "Silkscreen", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    color: rgb(255, 255, 255);
+                    font-size: 40px;
+                }
+
+                #wordleTable tr
+                {   
+                    border-collapse: collapse;
+                    width: 20%;
+                    height: 70px;
+                }
+
+                #tableScroller
+                {
+                    overflow-x: hidden;
+                    overflow-y: hidden;
+                    top: 102px;
+                    width: 350px;
+                    height: 445px;
+                    position: absolute;
+                }
+
+                #searchbar
+                {
+                    text-align: center;
+                    font-size: 30px;
+                    border: 0px solid white;
+                    background-color: rgba(255, 255, 255, 1);
+                    border-radius: 6px;
+                    width: 345px;     
+                    height: 100px;       
+                }
+
+                #typebar
+                {
+                    top:0;
+                    left: 50%;
+                    transform: translate(-50%, 0%);
+                    position: absolute;
+                    width: 345px;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                #daysLeftletters
+                {
+                    color: rgba(0, 0, 0, 0.4);
+                    font-size: 30px;
+                    font-weight: 700;
+                    font-family: "Silkscreen", sans-serif;
+                }
+
+                #innerheader
+                {
+                background: url(./images/redsign.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain; 
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translate(-20px, 21px);
                 height: 200px;
                 width: 200px;
                 display: flex;
