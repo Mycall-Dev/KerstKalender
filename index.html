@@ -68,8 +68,8 @@
                 margin: 0;
                 padding: 0;
                 position: relative;
-                min-height: 100vh;
-                width: 100vw;
+                min-height: 100%;
+                width: 100%;
                 overflow: hidden;
                 background-color: transparent;
                 /*
@@ -224,6 +224,7 @@
 
             #menuBox
             {
+                z-index: 1000;
                 padding-bottom: 5px;
                 background-color: rgb(255 255 255 / 60%);
                 border-radius: 0px 0px 20px 0px;
@@ -1406,7 +1407,7 @@
                     padding: 30px 30px 30px 30px;
                     position: absolute;
                     z-index: 10;
-                    width: 290px;
+                    width: 240px;
                     height: 200px;
                     color: white;
                     font-size: 19px;
@@ -1496,7 +1497,7 @@
                     font-weight: 700;
                     font-style: normal;
                     color: rgb(255, 255, 255);
-                    font-size: 40px;
+                    font-size: 30px;
                 }
 
                 #wordleTable tr
@@ -1569,7 +1570,7 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                transform: translate(-40px, 72.5px); /* -20 21 before */
+                transform: translate(-45px, 72.5px); /* -20 21 before */
                 height: 150px;
                 width: 150px;
                 display: flex;
