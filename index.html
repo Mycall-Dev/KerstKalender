@@ -9,9 +9,9 @@
         
             #header
             {
+                margin-top: 20px;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: 40px;
                 width: 500px;
                 height: 200px;
                 position: relative;
@@ -100,6 +100,8 @@
                 position: relative;
                 margin-left: auto;
                 margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
                 width: 500px;
                 height: 500px;
                 border: 2px solid rgba(255, 255, 255, 1);
@@ -426,7 +428,7 @@
                 bottom: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
-                min-height: 100%;
+                min-height: 110%;
                 width: auto;
                 object-fit: cover;
                 z-index: -10; /* To make it a background */
@@ -484,7 +486,6 @@
             
             #outer-list
             {
-                pointer-events:none;
                 z-index: 10;
                 position: absolute;
                 background: url(./images/list.png);
@@ -1425,7 +1426,7 @@
                 .christmasletters
                 {
                     color: rgb(0 0 0/0%);
-                    font-size: 28px;
+                    font-size: 21px;
                     font-weight: 500;
                     font-family: "Silkscreen", sans-serif;
                     display: none;
@@ -1478,7 +1479,7 @@
                     margin-top: 0px;
                     position: relative;
                     width: 300px;
-                    height: 535px;
+                    height: 440px;
                     background-color:  rgba(255, 255, 255, 0.6);
                     border-radius: 6px;
                     display: none;
@@ -1518,22 +1519,21 @@
                 #searchbar
                 {
                     text-align: center;
-                    font-size: 30px;
+                    font-size: 20px;
                     border: 0px solid white;
                     background-color: rgba(255, 255, 255, 1);
                     border-radius: 6px;
-                    width: 300px;     
+                    width: 295px;     
                     height: 75px;       
                 }
 
                 #typebar
                 {
-                    font-size: 10px;
                     top:0;
                     left: 50%;
                     transform: translate(-50%, 0%);
                     position: absolute;
-                    width: 300px;
+                    width: 295px;
                     height: 75px;
                     display: flex;
                     align-items: center;
@@ -1543,9 +1543,21 @@
                 #daysLeftletters
                 {
                     color: rgba(0, 0, 0, 0.4);
-                    font-size: 30px;
+                    font-size: 25px;
                     font-weight: 700;
                     font-family: "Silkscreen", sans-serif;
+                }
+
+                #textPositioning
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    top: 45px;
                 }
 
                 #innerheader
@@ -1557,7 +1569,7 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                transform: translate(-20px, 21px);
+                transform: translate(-40px, 72.5px); /* -20 21 before */
                 height: 150px;
                 width: 150px;
                 display: flex;
