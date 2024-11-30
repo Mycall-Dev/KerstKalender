@@ -65,6 +65,7 @@
 
             body
             {
+                background-color: black;
                 margin: 0;
                 padding: 0;
                 position: relative;
@@ -220,6 +221,7 @@
 
             #daysLeftletters
             {
+                text-align: center;
                 color: rgba(0, 0, 0, 0.4);
                 font-size: 30px;
                 font-weight: 600;
@@ -1651,7 +1653,7 @@
                 #daysLeftletters
                 {
                     color: rgba(0, 0, 0, 0.4);
-                    font-size: 25px;
+                    font-size: 22px;
                     font-weight: 700;
                     font-family: "Silkscreen", sans-serif;
                 }
@@ -2852,6 +2854,7 @@
             var letterToReveal = 0;
             var hintsLeft = 0;
             let hour;
+            let B;
             var videoBackgroundId = document.getElementById("videoBackground");
             var backupvideoBackground = document.getElementById("backUpbackground");
             var snowTurnedOn = true;
@@ -4229,7 +4232,7 @@
             
             function unlockDays()
             {
-                let B = currentDay.getUTCDate();
+                B = currentDay.getUTCDate();
                 if(hour === 0)
                 {
                     B = currentDay.getUTCDate() + 1; 
@@ -4239,7 +4242,6 @@
                 {
                     B = 25;
                 }
-
                 daybuttons[B-1].innerHTML = " <img src='./images/goldencircle.png' id='holly' draggable='false'>" + B;
                 for(i=0;i<daybuttons.length;i++)
                 {
@@ -4275,7 +4277,7 @@
             {
                 if(!dayLeftToUnlock)
                 {
-                    if(day <= 25) //change 25 to B later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+                    if(day <= B) //change 25 to B later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
                     {
                         cutSceneInProgress = false; //to fix cutsceneinprogress still after buttonpress
                         if(musicTurnedOn)
