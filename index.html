@@ -355,6 +355,7 @@
 
             #guideText
             {
+                border: 2px solid red;;
                 color: white;
                 -webkit-user-select: none; /* Safari */
                 -ms-user-select: none; /* IE 10 and IE 11 */
@@ -422,6 +423,21 @@
                 padding: 0;
                 overflow: hidden;
                 height: 100%;
+            }
+
+            #backUpbackground
+            {
+                pointer-events: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                min-height: 110%;
+                width: auto;
+                object-fit: cover;
+                z-index: -11; /* To make it a background */
             }
 
             video
@@ -574,7 +590,7 @@
 
             #finalBattleButton
             {
-                
+                display: none; /* Change to none */
                 background-color: red;
                 color: black;
                 -webkit-user-select: none; /* Safari */
@@ -612,7 +628,7 @@
             {
                 position: absolute;
                 top: 0;
-                transform: translate(0, -155px);
+                transform: translate(0, -165px);
                 display: flex;
                 z-index: 100;
                 display: none;
@@ -623,7 +639,9 @@
                 width: 50px;
                 height: 50px;
                 background-size: 50px;
-                background: url(./images/heart.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(./images/heart.png);
             }
 
             #timeBar
@@ -667,6 +685,15 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 8;
+            }
+
+            #goldenCard
+            {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 375px;
             }
 
             #crystalSnow
@@ -947,7 +974,7 @@
                 font-size: 20px;
                  font-family: "Silkscreen", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 670;
+                font-weight: 400;
                 font-style: normal;
                 width: 250px;
                 height: 100px;
@@ -1157,6 +1184,16 @@
                     bottom: 0%;
                     left: 95%;
                     transform: translate(-50%, 30%);
+                }
+
+                #crystalSnow
+                {
+                    width: 200px;
+                }
+
+                #goldenCard
+                {
+                    width: 300px;
                 }
         
             }
@@ -1405,7 +1442,7 @@
                 font-optical-sizing: auto;
                 font-weight: 670;
                 font-style: normal;
-                font-size: 20px;
+                font-size: 15px;
                 padding: 5px 5px 5px 5px;
                  font-family: "Silkscreen", sans-serif;
                 color: red;
@@ -1416,17 +1453,17 @@
                 -webkit-user-select: none; /* Safari */
                 -ms-user-select: none; /* IE 10 and IE 11 */
                 user-select: none; /* Standard syntax */
-                padding: 20px 20px 20px 20px;
+                padding: 10px 10px 10px 10px;
                 word-wrap: break-word;
                 position: absolute;
                 z-index: 10;
                 color: white;
-                font-size: 20px;
-                 font-family: "Silkscreen", sans-serif;
+                font-size: 15px;
+                font-family: "Silkscreen", sans-serif;
                 font-optical-sizing: auto;
-                font-weight: 670;
+                font-weight: 400;
                 font-style: normal;
-                width: 250px;
+                width: 240px;
                 height: 100px;
                 top: 110%;
                 left: 11%;
@@ -1461,6 +1498,16 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
             }
+
+                #crystalSnow
+                {
+                    width: 160px;
+                }
+
+                #goldenCard
+                {
+                    width: 250px;
+                }
 
                 #textBox
                 {
@@ -1608,6 +1655,27 @@
                     font-family: "Silkscreen", sans-serif;
                 }
 
+                #healthBar
+                {
+                    position: absolute;
+                    top: 0;
+                    transform: translate(0, -120px);
+                    display: flex;
+                    z-index: 100;
+                    display: none;
+                    flex-direction: column;
+                }
+
+                .healthPoint
+                {
+                    width: 40px;
+                    height: 40px;
+                    background-size: 40px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url(./images/heart.png);
+                }
+
                 #textPositioning
                 {
                     display: flex;
@@ -1678,10 +1746,8 @@
             <source src="./SFX/phonering.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
-        <video autoplay muted loop id="backupVideoBackground">
-            <source src="./images/forest_night.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop id="videoBackground">
+        <img id="backUpbackground" src="./images/forest_night.png">
+        <video autoplay muted loop playsinline id="videoBackground">
             <source id="videoChangeId" src="./images/forest_night.mp4" type="video/mp4">
         </video>
         
@@ -1950,16 +2016,13 @@
                 "./music/Christmas(BabyPleaseComeHome).mp3",
                 "./music/DrivingHomeForChristmas.mp3",
                 "./music/FelizNavidad.mp3",
-                "./music/HappyXmas(WarIsOver).mp3",
                 "./music/It'sBeginningtoLookaLotlikeChristmas.mp3",
                 "./music/It'stheMostWonderfulTimeoftheYear.mp3",
                 "./music/JingleBellRock.mp3",
                 "./music/LastChristmas.mp3",
                 "./music/LetItSnow!LetItSnow!LetItSnow!.mp3",
                 "./music/MerryChristmasEveryone.mp3",
-                "./music/Mr.Snowman.mp3",
                 "./music/Rockin'AroundTheChristmasTree.mp3",
-                "./music/SantaTellMe.mp3",
                 "./music/SleighRide.mp3",
                 "./music/UnderneaththeTree.mp3",
                 "./music/WhyCouldn'tItBeChristmasEveryday.mp3"
@@ -2297,7 +2360,7 @@
                 "But... there have been budgetcuts this year", "./images/phone_still.png", "low",
                 "and last year... and the year before that", "./images/phone_still.png", "low",
                 "What I'm trying to say, is...", "./images/phone_still.png", "low",
-                "Santa can't pay you in money or presents, but santa has something that will most definetely suit your needs", "./images/phone_still.png", "low",
+                "Santa can't pay you in money, but santa has something that will most definetely suit your needs", "./images/phone_still.png", "low",
                 "Santa might have been busy with grading the lists and such, but i always go the extra mile for my loyal servants", "./images/phone_still.png", "low",
                 "With the help of my elves, santa has made quite the effort for this gift", "./images/phone_still.png", "low",
                 "A wonderful tapestry you can display in your room!", "./images/phone_still.png", "low",
@@ -2368,7 +2431,8 @@
                 "Quite a powerful ability to have, but it's nothing compared to my Christmas Magic", "./images/phone_still.png", "low",
                 "One line of my snow and i'm ready to stop time for a whole year", "./images/phone_still.png", "low",
                 "Trust me you won't deliver all of the world's presents by stopping time for just five seconds ho ho ho", "./images/phone_still.png", "low",
-                "Why doesn't santa give you one of his bags of snow just in case? Though it probably won't give you the ability to stop time, it's worth a try", "./images/phone_still.png", "low",
+                "Why doesn't santa give you one of his bags of snow just in case?", "./images/phone_still.png", "low",
+                "Though it probably won't give you the ability to stop time, it's worth a try", "./images/phone_still.png", "low",
                 "R E C E I V I N G", "./images/phone_still.png", "calm",
                 "insert img", "./images/phone_still.png", "calm",
                 "only open this bag if you have no other options left...", "./images/phone_still.png", "low"
@@ -2767,7 +2831,7 @@
             var hintsLeft = 0;
             let hour;
             var videoBackgroundId = document.getElementById("videoBackground");
-            var backupvideoBackground = document.getElementById("backupVideoBackground");
+            var backupvideoBackground = document.getElementById("backUpbackground");
             var snowTurnedOn = true;
             var musicTurnedOn = false;
             var snowglobeIcon = document.getElementById("snowIcon");
@@ -2842,6 +2906,13 @@
                 [sluggish1, sluggish2, sluggish3], // Sluggish
                 [calm1, calm2, calm3]         // Calm
             ];
+
+            videoBackgroundId.addEventListener("pause", () => {
+            if (!videoBackgroundId.ended)
+            {
+                videoBackgroundId.play(); /* keeping this here but it doesn't work 100% because of powersaving google */
+            }
+            });
 
             function ReplayContinue({buttonNum})
             {
@@ -2974,31 +3045,31 @@
                 hour = currentTime.getUTCHours() + 1;
                 if(hour < 6)
                 {
-                    backupvideoBackground.src = "./images/forest_night_still.mp4";
+                    backupvideoBackground.src = "./images/forest_night_png";
                     videoBackgroundId.src = "./images/forest_night.mp4";
                     backgroundSnowHandlerSafeNumber = 0;
                 }
                 else if(hour < 12)
                 {
-                    backupvideoBackground.src = "./images/forest_sundownup_still.mp4";
+                    backupvideoBackground.src = "./images/forest_sundownup.png";
                     videoBackgroundId.src = "./images/forest_sundownup.mp4";
                     backgroundSnowHandlerSafeNumber = 2;
                 }
                 else if(hour < 18)
                 {
-                    backupvideoBackground.src = "./images/forest_day_still.mp4";
+                    backupvideoBackground.src = "./images/forest_day.png";
                     videoBackgroundId.src = "./images/forest_day.mp4";
                     backgroundSnowHandlerSafeNumber = 1;
                 }
                 else if(hour < 20)
                 {
-                    backupvideoBackground.src = "./images/forest_sundownup_still.mp4";
+                    backupvideoBackground.src = "./images/forest_sundownup.png";
                     videoBackgroundId.src = "./images/forest_sundownup.mp4";
                     backgroundSnowHandlerSafeNumber = 2;
                 }
                 else
                 {
-                    backupvideoBackground.src = "./images/forest_night_still.mp4";
+                    backupvideoBackground.src = "./images/forest_night.png";
                     videoBackgroundId.src = "./images/forest_night.mp4";
                     backgroundSnowHandlerSafeNumber = 0;
                 }    
@@ -3025,7 +3096,7 @@
             var wordCounter = 0;
             var backgroundSnowHandlerSafe = 
             [
-                "./images/forest_night.mp4", "./images/forest_day.mp4", "./images/forest_sundownup.mp4", "./images/forest_night_still.mp4", "./images/forest_day_still.mp4", "./images/forest_sundownup_still.mp4"
+                "./images/forest_night.mp4", "./images/forest_day.mp4", "./images/forest_sundownup.mp4"
             ];
 
             function wordCounting({inputField})
@@ -3107,13 +3178,13 @@
                 {
                     snowTurnedOn = false;
                     snowglobeIcon.src = "./images/snow_off_pixel.png";
-                    videoBackgroundId.src = backgroundSnowHandlerSafe[backgroundSnowHandlerSafeNumber + 3];
+                    videoBackgroundId.style.display = "none";
                 }
                 else
                 {
                     snowTurnedOn = true;
                     snowglobeIcon.src = "./images/snow_on_pixel.png";
-                    videoBackgroundId.src = backgroundSnowHandlerSafe[backgroundSnowHandlerSafeNumber];
+                    videoBackgroundId.style.display = "block";
                 }
             }
 
@@ -4317,13 +4388,17 @@
                 if(SentenceTypeCounter < (santaTextSafe[dayChosen-1-finalDayTextAdjust][textProgression]).length)
                 {
                     santaText.innerHTML += (santaTextSafe[dayChosen-1-finalDayTextAdjust][textProgression]).charAt(SentenceTypeCounter);
-                    if((dayChosen-1-finalDayTextAdjust === 10) && textProgression === 27)
+                    if((dayChosen-1-finalDayTextAdjust === 10) && textProgression === 30)
                     {
                         santaText.innerHTML = "<img id='crystalSnow' src='./images/crystalsnow.png'>";
                     }
                     else if((dayChosen-1-finalDayTextAdjust === 19) && textProgression === 27)
                     {
-                        santaText.innerHTML = "<img id='goldenCard' src='./images/goldenCard.png'>";
+                        santaText.innerHTML = "<img id='goldenCard' src='./images/golden_card.png'>";
+                    }
+                    else if((dayChosen-1-finalDayTextAdjust === 6) && textProgression === 42)
+                    {
+                        santaText.innerHTML = "<img id='santaTapestry' src='./images/santa_tapestry.png'>";
                     }
                     
                     var j = Math.floor(Math.random() * 3);
